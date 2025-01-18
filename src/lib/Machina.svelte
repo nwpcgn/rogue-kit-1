@@ -200,7 +200,7 @@
 					id="sidebarel-2x"
 					transform="translate(287 25)" />
 
-						<!-- <rect
+				<!-- <rect
 					fill="none"
 					height="166"
 					width="218"
@@ -215,7 +215,6 @@
 						{/each}
 					</div>
 				</foreignObject>
-			
 			</g>
 		</svg>
 	</div>
