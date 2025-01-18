@@ -2,11 +2,11 @@ export const load = async () => {
 	return {
 		nav: [
 			{ name: 'Home', href: '/', icon: 'icon-home' },
-			{ name: 'Clicker', href: '/clicker', icon: 'icon-battle' },
-			{ name: 'Fight', href: '/fight', icon: 'icon-archive' },
-			{ name: 'Battle', href: '/battle', icon: 'icon-db' },
-			{ name: 'Gift', href: '/gift', icon: 'icon-buildings' },
-			{ name: 'Tabs', href: '/tabs', icon: 'icon-bar' }
+			{ name: 'Notes', href: '/notes', icon: 'icon-battle' },
+			{ name: 'Pathfinder', href: '/navi', icon: 'icon-archive' },
+			{ name: 'Pixelator', href: '/pixel', icon: 'icon-db' }
+			// { name: 'Gift', href: '/gift', icon: 'icon-buildings' },
+			// { name: 'Tabs', href: '/tabs', icon: 'icon-bar' }
 		],
 		colors: [
 			'neutral',
