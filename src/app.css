@@ -5,13 +5,36 @@
 	@apply flex flex-col h-screen w-full overflow-x-hidden;
 } */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	@apply mb-2;
+}
+
 h1 {
-	@apply text-6xl font-extrabold leading-relaxed;
+	@apply text-5xl font-extrabold;
 }
 h2 {
-	@apply text-4xl font-light leading-relaxed;
+	@apply text-4xl font-light;
 }
 
 h3 {
-	@apply text-2xl font-medium;
+	@apply text-3xl font-bold;
+}
+h4 {
+	@apply text-2xl font-light;
+}
+
+h5 {
+	@apply text-xl italic;
+}
+h6 {
+	@apply font-thin text-sm;
+}
+p {
+	@apply text-lg font-medium;
 }

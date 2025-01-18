@@ -6,6 +6,12 @@
 	let { children } = $props()
 </script>
 
+<header>
+	<div class="navbar bg-neutral text-neutral-content shadow">
+		<a href="#/" class="btn btn-ghost text-xl">Nwp-Studio</a>
+	</div>
+</header>
+
 {@render children?.()}
 
 <IconSprite />

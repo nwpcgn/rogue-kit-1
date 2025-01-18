@@ -11,7 +11,7 @@
 
 	function clear() {
 		textInput = ''
-        genNav = []
+		genNav = []
 	}
 	function generate() {
 		genNav = genList
@@ -32,7 +32,7 @@
 		class="textarea w-full"
 		onfocus={() => {
 			showOutput = false
-            genNav = []
+			genNav = []
 		}}></textarea>
 	{#if showOutput}
 		<div transition:slide>
@@ -47,7 +47,9 @@
 		<button class="btn" onclick={clear}>Clear</button>
 		<button class="btn" onclick={generate}>Generate</button>
 		{#if genNav.length}
-			<button class="btn btn-info join-item" onclick={() => (showOutput = !showOutput)}>
+			<button
+				class="btn btn-info join-item"
+				onclick={() => (showOutput = !showOutput)}>
 				{showOutput ? 'Hide' : 'Show'} Output
 			</button>
 			<button class="btn btn-warning" onclick={copy}>Copy Output</button>

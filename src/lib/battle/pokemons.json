@@ -1,0 +1,130 @@
+[
+	{
+		"slug": "abra",
+		"name": "Abra",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "abra.png"
+	},
+	{
+		"slug": "aerodactyl",
+		"name": "Aerodactyl",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "aerodactyl.png"
+	},
+	{
+		"slug": "alakazam",
+		"name": "Alakazam",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "alakazam.png"
+	},
+	{
+		"slug": "ampharos",
+		"name": "Ampharos",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "ampharos.png"
+	},
+	{
+		"slug": "aron",
+		"name": "Aron",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "aron.png"
+	},
+	{
+		"slug": "axew",
+		"name": "Axew",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "axew.png"
+	},
+	{
+		"slug": "dusclops",
+		"name": "Dusclops",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "dusclops.png"
+	},
+	{
+		"slug": "frillish",
+		"name": "Frillish",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "frillish.png"
+	},
+	{
+		"slug": "growlithe",
+		"name": "Growlithe",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "growlithe.png"
+	},
+	{
+		"slug": "hydreigon",
+		"name": "Hydreigon",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "hydreigon.png"
+	},
+	{
+		"slug": "persian",
+		"name": "Persian",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "persian.png"
+	},
+	{
+		"slug": "pichu",
+		"name": "Pichu",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "pichu.png"
+	},
+	{
+		"slug": "stunky",
+		"name": "Stunky",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "stunky.png"
+	},
+	{
+		"slug": "zorua",
+		"name": "Zorua",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "zorua.png"
+	},
+	{
+		"slug": "zubat",
+		"name": "Zubat",
+		"health": 80,
+		"att": 15,
+		"def": 5,
+		"file": "zubat.png"
+	},
+	{
+		"slug": "mew",
+		"name": "Mew",
+		"health": 100,
+		"att": 20,
+		"def": 10,
+		"file": "mew.png"
+	}
+]

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Toasts from '../../lib/toast/Toasts.svelte'
-	let title = $state('Notes')
+	let title = $state('Settings')
 </script>
 
 <section class="page-layer nwp">
@@ -9,4 +8,3 @@
 		<p><a href="#/" class="btn">Start</a></p>
 	</article>
 </section>
-<Toasts></Toasts>
