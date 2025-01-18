@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "icon-home"
+    },
+    {
+        "id": 2,
+        "name": "icon-battle"
+    },
+    {
+        "id": 3,
+        "name": "icon-start"
+    },
+    {
+        "id": 4,
+        "name": "icon-resources"
+    },
+    {
+        "id": 5,
+        "name": "icon-archive"
+    },
+    {
+        "id": 6,
+        "name": "icon-buildings"
+    },
+    {
+        "id": 7,
+        "name": "icon-worker"
+    },
+    {
+        "id": 8,
+        "name": "icon-upgrades"
+    },
+    {
+        "id": 9,
+        "name": "icon-settings"
+    },
+    {
+        "id": 10,
+        "name": "icon-menu"
+    },
+    {
+        "id": 11,
+        "name": "icon-close"
+    },
+    {
+        "id": 12,
+        "name": "icon-user"
+    },
+    {
+        "id": 13,
+        "name": "icon-left"
+    },
+    {
+        "id": 14,
+        "name": "icon-right"
+    },
+    {
+        "id": 15,
+        "name": "icon-bar"
+    },
+    {
+        "id": 16,
+        "name": "icon-exit"
+    },
+    {
+        "id": 17,
+        "name": "icon-db"
+    },
+    {
+        "id": 18,
+        "name": "icon-burger"
+    },
+    {
+        "id": 19,
+        "name": "icon-refresh"
+    },
+    {
+        "id": 20,
+        "name": "icon-options"
+    }
+]

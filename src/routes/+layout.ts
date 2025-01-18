@@ -1,12 +1,10 @@
 export const load = async () => {
 	return {
 		nav: [
-			{ name: 'Home', href: '/', icon: 'icon-home' },
-			{ name: 'Notes', href: '/notes', icon: 'icon-battle' },
-			{ name: 'Pathfinder', href: '/navi', icon: 'icon-archive' },
-			{ name: 'Pixelator', href: '/pixel', icon: 'icon-db' }
-			// { name: 'Gift', href: '/gift', icon: 'icon-buildings' },
-			// { name: 'Tabs', href: '/tabs', icon: 'icon-bar' }
+			{ name: 'Start', href: '/', icon: 'icon-start' },
+			{ name: 'Pathfinder', href: '/navi', icon: 'icon-db' },
+			{ name: 'Notes', href: '/notes', icon: 'icon-notes' },
+			{ name: 'Pixel', href: '/pixel', icon: 'icon-pixel' }
 		],
 		colors: [
 			'neutral',
