@@ -1,0 +1,34 @@
+{
+	"rpg": [
+		"icon-home",
+		"icon-battle",
+		"icon-start",
+		"icon-resources",
+		"icon-archive",
+		"icon-buildings",
+		"icon-worker",
+		"icon-upgrades",
+		"icon-settings",
+		"icon-menu",
+		"icon-close",
+		"icon-user",
+		"icon-left",
+		"icon-right",
+		"icon-bar",
+		"icon-exit",
+		"icon-db",
+		"icon-burger",
+		"icon-refresh",
+		"icon-options"
+	],
+	"buildings": [
+		"rpg-build1",
+		"rpg-build2",
+		"rpg-build3",
+		"rpg-build4",
+		"rpg-build5",
+		"rpg-build6",
+		"rpg-build7",
+		"rpg-build8"
+	]
+}

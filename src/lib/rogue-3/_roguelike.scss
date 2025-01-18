@@ -1,0 +1,68 @@
+.roguelike-container {
+	height: 100%;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr minmax(1fr 2fr);
+	grid-template-rows: min-content 1fr;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'rTop rTop'
+		'rLeft rRight';
+}
+
+.rTop {
+	grid-area: rTop;
+}
+
+.rLeft {
+	grid-area: rLeft;
+	position: relative;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.rRight {
+	grid-area: rRight;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.rogue-item {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+
+	> * {
+		grid-row: 1;
+		grid-column: 1;
+	}
+}
+
+.rogue-bg {
+	background-image: url('img/bg3.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	filter: opacity(100%) grayscale(0%);
+}
+
+.game-rogue-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--rounded-box, 1rem);
+	--bg-opacity: 0.8;
+	background-color: var(--fallback-b1, oklch(var(--b1) / var(--bg-opacity, 1)));
+}
+
+.game-rogue-content {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	padding: var(--padding-card, 2rem);
+	gap: 0.5rem;
+}

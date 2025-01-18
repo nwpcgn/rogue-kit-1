@@ -1,0 +1,139 @@
+.page-layer {
+	--oy: auto;
+	--pc: center;
+	--ad: 1.5s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: var(--oy);
+
+	&.fix {
+		--oy: hidden;
+	}
+
+	&.center {
+		display: grid;
+		place-content: var(--pc);
+	}
+
+	&.middle {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&.nwp {
+		animation: var(--ad) cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+		animation-delay: 0.4s;
+	}
+}
+
+.page-layer {
+	transition:
+		transform var(--layer-dur, 0.5s) ease-in-out var(--layer-del, 0s),
+		opacity 0.3s ease 0.1s;
+
+	&.top {
+		--layer-del: 0.1s;
+		transform: translate(0, -100%);
+		opacity: 0;
+	}
+
+	&.bottom {
+		--layer-del: 0.1s;
+		transform: translate(0, 100%);
+		opacity: 0;
+	}
+
+	&.left {
+		--layer-del: 0.1s;
+		transform: translate(-100%, 0);
+		opacity: 0;
+	}
+
+	&.right {
+		--layer-del: 0.1s;
+		transform: translate(100%, 0);
+		opacity: 0;
+	}
+
+	&.active {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes circle-out-center {
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(125%);
+	}
+}
+.circle-center,
+[transition-style='out:circle:center'] {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-out-center
+		both;
+	animation-delay: var(--del, 0s);
+}
+
+@keyframes circle-in-center {
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(125%);
+	}
+}
+
+[transition-style='in:circle:center'] {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-in-center
+		both;
+	animation-delay: var(--del, 0.1s);
+}
+
+@keyframes circle-out-hesitate {
+	0% {
+		clip-path: circle(125%);
+	}
+
+	40% {
+		clip-path: circle(40%);
+	}
+
+	100% {
+		clip-path: circle(0%);
+	}
+}
+.circle-out,
+[transition-style='out:circle:hesitate'] {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-out-hesitate
+		both;
+	animation-delay: var(--del, 0.6s);
+}
+
+@keyframes circle-in-hesitate {
+	0% {
+		clip-path: circle(0%);
+	}
+
+	40% {
+		clip-path: circle(40%);
+	}
+
+	100% {
+		clip-path: circle(125%);
+	}
+}
+.circle-in,
+[transition-style='in:circle:hesitate'] {
+	animation: var(--dur, 2.5s) cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate
+		both;
+	animation-delay: var(--del, 0.1s);
+}

@@ -1,0 +1,22 @@
+.rpg-grid {
+	flex: 1;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'rgb-sb rgb-main';
+
+	.rgb-sb {
+		grid-area: rgb-sb;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.rgb-main {
+		grid-area: rgb-main;
+		position: relative;
+		overflow: hidden;
+	}
+}

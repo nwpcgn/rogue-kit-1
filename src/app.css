@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+/* body {
+	@apply flex flex-col h-screen w-full overflow-x-hidden;
+} */
+
+h1 {
+	@apply text-6xl font-extrabold leading-relaxed;
+}
+h2 {
+	@apply text-4xl font-light leading-relaxed;
+}
+
+h3 {
+	@apply text-2xl font-medium;
+}

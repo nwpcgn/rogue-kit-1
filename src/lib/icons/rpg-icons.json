@@ -1,0 +1,85 @@
+{
+	"sprite": "<svg aria-hidden=\"true\" style=\"position: absolute; width: 0; height: 0; overflow: hidden\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><defs><symbol id=\"icon-home\" viewBox=\"0 0 32 32\"><title>home</title><path d=\"M8 28v-15l8-9 8 9v15h-16z\"></path></symbol><symbol id=\"icon-settings\" viewBox=\"0 0 32 32\"><title>settings</title><path d=\"M26 8v4h-4v4h-4v-4h-12v-4h12v-4h4v4h4zM14 16h-4v4h-4v4h4v4h4v-4h12v-4h-12v-4z\"></path></symbol><symbol id=\"icon-upgrades\" viewBox=\"0 0 32 32\"><title>upgrades</title><path d=\"M28 12v16h-24v-12h4v-12h8v16h4v-4h4v-4h4z\"></path></symbol><symbol id=\"icon-resources\" viewBox=\"0 0 32 32\"><title>resources</title><path d=\"M24 12v-8h-16v8.060l-4-0.005v15.945h24v-16h-4zM20 12h-8v-4h8v4z\"></path></symbol><symbol id=\"icon-menu\" viewBox=\"0 0 32 32\"><title>menu</title><path d=\"M8 18h16v4h-16v-4zM8 10v4h16v-4h-16z\"></path></symbol><symbol id=\"icon-battle\" viewBox=\"0 0 32 32\"><title>battle</title><path d=\"M14.586 20.243l2.828 2.828-2.828 2.828-2.828-2.828-2.828 2.828-2.828-2.828 2.828-2.828-2.828-2.828 2.828-2.828 2.828 2.828 11.313-11.315 2.828 2.828-11.313 11.315z\"></path></symbol><symbol id=\"icon-close\" viewBox=\"0 0 32 32\"><title>close</title><path d=\"M18.828 16l4.243 4.243-2.828 2.828-4.243-4.243-4.243 4.243-2.828-2.828 4.243-4.243-4.243-4.243 2.828-2.828 4.243 4.243 4.243-4.243 2.828 2.828-4.243 4.243z\"></path></symbol><symbol id=\"icon-start\" viewBox=\"0 0 32 32\"><title>start</title><path d=\"M14 14h4v4h-4v-4zM6 26h4v-4h-4v4zM22 18h4v-4h-4v4zM14 26h4v-4h-4v4zM6 10h4v-4h-4v4zM14 10h4v-4h-4v4zM22 6v4h4v-4h-4zM22 26h4v-4h-4v4zM6 18h4v-4h-4v4z\"></path></symbol><symbol id=\"icon-buildings\" viewBox=\"0 0 32 32\"><title>buildings</title><path d=\"M14 4v4h-8v20h20v-24h-12zM14 24h-4v-4h4v4zM14 16h-4v-4h4v4zM22 20h-4v-4h4v4zM22 12h-4v-4h4v4z\"></path></symbol><symbol id=\"icon-worker\" viewBox=\"0 0 32 32\"><title>worker</title><path d=\"M22 21h-4v-4l4-4v-6l-4-4h-4l-4 4v6l4 4v4h-4l-4 4v7h20v-7z\"></path></symbol><symbol id=\"icon-user\" viewBox=\"0 0 32 32\"><title>user</title><path d=\"M16 2.667c7.36 0 13.333 5.973 13.333 13.333s-5.973 13.333-13.333 13.333c-7.36 0-13.333-5.973-13.333-13.333s5.973-13.333 13.333-13.333zM8.031 20.555c1.957 2.921 4.896 4.778 8.182 4.778s6.225-1.857 8.182-4.778c-2.143-1.999-5.020-3.222-8.182-3.222s-6.038 1.223-8.182 3.222zM16 14.667c2.209 0 4-1.791 4-4s-1.791-4-4-4c-2.209 0-4 1.791-4 4s1.791 4 4 4z\"></path></symbol><symbol id=\"icon-left\" viewBox=\"0 0 32 32\"><title>left</title><path d=\"M11.158 16l6.33-11.957 2.357 1.248-5.67 10.709 5.67 10.709-2.357 1.248-6.33-11.957z\"></path></symbol><symbol id=\"icon-right\" viewBox=\"0 0 32 32\"><title>right</title><path d=\"M20.842 16l-6.33-11.957-2.357 1.248 5.67 10.709-5.67 10.709 2.357 1.248 6.33-11.957z\"></path></symbol><symbol id=\"icon-bar\" viewBox=\"0 0 32 32\"><title>bar</title><path d=\"M4 16h2.667v12h-2.667v-12zM25.333 10.667h2.667v17.333h-2.667v-17.333zM14.667 2.667h2.667v25.333h-2.667v-25.333z\"></path></symbol><symbol id=\"icon-exit\" viewBox=\"0 0 32 32\"><title>exit</title><path d=\"M16 14.115l6.6-6.6 1.886 1.886-6.6 6.6 6.6 6.6-1.886 1.886-6.6-6.6-6.6 6.6-1.886-1.886 6.6-6.6-6.6-6.6 1.886-1.886 6.6 6.6z\"></path></symbol><symbol id=\"icon-db\" viewBox=\"0 0 32 32\"><title>db</title><path d=\"M28 12.667v4c0 3.314-5.373 6-12 6s-12-2.686-12-6v-4c0 3.314 5.373 6 12 6s12-2.686 12-6zM4 19.333c0 3.314 5.373 6 12 6s12-2.686 12-6v4c0 3.314-5.373 6-12 6s-12-2.686-12-6v-4zM16 16c-6.627 0-12-2.686-12-6s5.373-6 12-6c6.627 0 12 2.686 12 6s-5.373 6-12 6z\"></path></symbol><symbol id=\"icon-burger\" viewBox=\"0 0 32 32\"><title>burger</title><path d=\"M4 5.333h24v2.667h-24v-2.667zM4 14.667h16v2.667h-16v-2.667zM4 24h24v2.667h-24v-2.667z\"></path></symbol><symbol id=\"icon-refresh\" viewBox=\"0 0 32 32\"><title>refresh</title><path d=\"M7.283 5.91c2.337-2.021 5.384-3.244 8.717-3.244 7.364 0 13.333 5.97 13.333 13.333 0 2.848-0.893 5.488-2.414 7.654l-4.252-7.654h4c0-5.891-4.776-10.667-10.667-10.667-2.867 0-5.47 1.131-7.386 2.971l-1.33-2.394zM24.717 26.090c-2.337 2.021-5.384 3.243-8.717 3.243-7.364 0-13.333-5.97-13.333-13.333 0-2.848 0.893-5.488 2.414-7.654l4.252 7.654h-4c0 5.891 4.776 10.667 10.667 10.667 2.867 0 5.47-1.131 7.386-2.971l1.33 2.394z\"></path></symbol><symbol id=\"icon-options\" viewBox=\"0 0 32 32\"><title>options</title><path d=\"M11.582 5.333l3.476-3.475c0.521-0.521 1.365-0.521 1.886 0l3.475 3.475h4.915c0.736 0 1.333 0.597 1.333 1.333v4.915l3.475 3.476c0.521 0.521 0.521 1.365 0 1.886l-3.475 3.475v4.915c0 0.736-0.597 1.333-1.333 1.333h-4.915l-3.475 3.475c-0.521 0.521-1.365 0.521-1.886 0l-3.476-3.475h-4.915c-0.736 0-1.333-0.597-1.333-1.333v-4.915l-3.475-3.475c-0.521-0.521-0.521-1.365 0-1.886l3.475-3.476v-4.915c0-0.736 0.597-1.333 1.333-1.333h4.915zM8 8v4.686l-3.314 3.314 3.314 3.314v4.686h4.686l3.314 3.314 3.314-3.314h4.686v-4.686l3.314-3.314-3.314-3.314v-4.686h-4.686l-3.314-3.314-3.314 3.314h-4.686zM16 21.333c-2.946 0-5.333-2.388-5.333-5.333s2.388-5.333 5.333-5.333c2.945 0 5.333 2.388 5.333 5.333s-2.388 5.333-5.333 5.333zM16 18.667c1.473 0 2.667-1.194 2.667-2.667s-1.194-2.667-2.667-2.667c-1.473 0-2.667 1.194-2.667 2.667s1.194 2.667 2.667 2.667z\"></path></symbol><symbol id=\"icon-archive\" viewBox=\"0 0 32 32\"><title>archive</title><path d=\"M4 13.333h-1.333v-7.996c0-0.739 0.607-1.337 1.322-1.337h24.022c0.73 0 1.322 0.584 1.322 1.337v7.996h-1.333v13.335c0 0.735-0.593 1.331-1.325 1.331h-21.351c-0.732 0-1.325-0.597-1.325-1.331v-13.335zM25.333 13.333h-18.667v12h18.667v-12zM5.333 6.667v4h21.333v-4h-21.333zM12 16h8v2.667h-8v-2.667z\"></path></symbol></defs></svg>",
+	"icons": [
+		{
+			"id": 1,
+			"name": "icon-home"
+		},
+		{
+			"id": 2,
+			"name": "icon-battle"
+		},
+		{
+			"id": 3,
+			"name": "icon-start"
+		},
+		{
+			"id": 4,
+			"name": "icon-resources"
+		},
+		{
+			"id": 5,
+			"name": "icon-archive"
+		},
+		{
+			"id": 6,
+			"name": "icon-buildings"
+		},
+		{
+			"id": 7,
+			"name": "icon-worker"
+		},
+		{
+			"id": 8,
+			"name": "icon-upgrades"
+		},
+		{
+			"id": 9,
+			"name": "icon-settings"
+		},
+		{
+			"id": 10,
+			"name": "icon-menu"
+		},
+		{
+			"id": 11,
+			"name": "icon-close"
+		},
+		{
+			"id": 12,
+			"name": "icon-user"
+		},
+		{
+			"id": 13,
+			"name": "icon-left"
+		},
+		{
+			"id": 14,
+			"name": "icon-right"
+		},
+		{
+			"id": 15,
+			"name": "icon-bar"
+		},
+		{
+			"id": 16,
+			"name": "icon-exit"
+		},
+		{
+			"id": 17,
+			"name": "icon-db"
+		},
+		{
+			"id": 18,
+			"name": "icon-burger"
+		},
+		{
+			"id": 19,
+			"name": "icon-refresh"
+		},
+		{
+			"id": 20,
+			"name": "icon-options"
+		}
+	]
+}
