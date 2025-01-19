@@ -1,24 +1,44 @@
 <script lang="ts">
 	// import FighterCard from './FighterCard.svelte'
-	// import shuffle from '../utils/shuffle'
-	import randNum from '../utils/randNum'
+	import generateRandomMap from './generateRandomMap'
+	import Modal from '../modal/Modal.svelte'
 	let { title = 'Arena II' } = $props()
-
+	const encounterKeys = ['C', 'M', 'N', 'L', 'S', 'D']
 	let options = $state({
-		room: {
-			w: 28,
-			h: 18,
-			s: 25,
-			wall: '#',
-			floor: '_',
-			player: '@',
-			exit: 'S'
-		}
+		width: 28,
+		height: 18,
+		size: 25,
+		wall: '#',
+		floor: '_',
+		player: '@',
+		exit: 'S'
 	})
-
-	let actionButtons = $state([])
-	let actionText = $state('Choose your action')
+	let showModal = $state(false)
 	let disabledKeys = $state(false)
+	let actionButtons = $state([])
+	let grid = $state([])
+
+	class Fighter {
+		name = $state('')
+		x = $state(2)
+		y = $state(2)
+		health = $state(80)
+		attack = $state(1)
+		defense = $state(1)
+		file = $state('')
+		constructor(name, x, y, health, attack, defense, file) {
+			this.name = name
+			this.x = x
+			this.y = y
+			this.health = health
+			this.attack = attack
+			this.defense = defense
+			this.file = file
+		}
+	}
+	let player = new Fighter('Mew', 2, 2, 80, 15, 5, 'mew.png')
+	let currentFloor = $state(1)
+	let actionText = $state('Choose your action')
 	/* --------------------------------- Actions -------------------------------- */
 	function addActionButton(text, onClick) {
 		actionButtons.push({ text, onClick })
@@ -28,172 +48,67 @@
 		actionButtons = []
 	}
 
-	const encounterKeys = ['C', 'M', 'N', 'L', 'S', 'D']
-	let encounterSymbols = $state(['C', 'M', 'N', 'L'])
-
-	let currentSymb = $state()
-
-	let grid = $state([])
-	let playerX = $state(2)
-	let playerY = $state(2)
-	let currentFloor = $state(1)
-	/* -------------------------------- Generator ------------------------------- */
-	function generateRandomMap() {
-		let newMap = []
-
-		for (let y = 0; y < options.room.h; y++) {
-			// Erstellt 20 Reihen
-			let row = ''
-			for (let x = 0; x < options.room.w; x++) {
-				// Jede Reihe hat 40 Spalten
-				if (
-					x === 0 ||
-					x === options.room.w - 1 ||
-					y === 0 ||
-					y === options.room.h - 1
-				) {
-					// Randbereiche mit Wänden (#) markieren
-					row += options.room.wall
-				} else {
-					// Freie Flächen (_) einfügen
-					row += options.room.floor
-				}
-			}
-			newMap.push(row) // Die Reihe zur Karte hinzufügen
-		}
-
-		// Räume generieren und platzieren
-		let rooms = generateRooms()
-		rooms.forEach((room) => {
-			for (let y = room.y; y < room.y + room.height; y++) {
-				for (let x = room.x; x < room.x + room.width; x++) {
-					if (
-						y === room.y ||
-						y === room.y + room.height - 1 ||
-						x === room.x ||
-						x === room.x + room.width - 1
-					) {
-						newMap[y] =
-							newMap[y].substring(0, x) +
-							options.room.wall +
-							newMap[y].substring(x + 1)
-					}
-				}
-			}
-			// Tür hinzufügen
-			let doorX = room.x + Math.floor(room.width / 2)
-			let doorY = room.y + room.height - 1
-			newMap[doorY] =
-				newMap[doorY].substring(0, doorX) +
-				'D' +
-				newMap[doorY].substring(doorX + 1)
-		})
-
-		// Begegnungen platzieren
-		placeEncounters(newMap, rooms, encounterSymbols)
-
-		// Spieler und Treppe zur Karte hinzufügen
-		newMap[2] =
-			newMap[2].substring(0, 2) + options.room.player + newMap[2].substring(3)
-		newMap[options.room.h - 2] =
-			newMap[options.room.h - 2].substring(0, options.room.w - 2) +
-			options.room.exit +
-			newMap[options.room.h - 2].substring(options.room.w - 1)
-		return newMap
-	}
-	function generateRooms() {
-		let rooms = []
-		let numRooms = randNum(2, 3)
-
-		for (let i = 0; i < numRooms; i++) {
-			let width = Math.floor(Math.random() * 5) + 6 // Breite: 6-10
-			let height = Math.floor(Math.random() * 3) + 4 // Höhe: 4-6
-			let x = Math.floor(Math.random() * (options.room.w - 2 - width)) + 1
-			let y = Math.floor(Math.random() * (options.room.h - 2 - height)) + 1
-
-			// Überlappungen vermeiden
-			let overlap = rooms.some(
-				(room) =>
-					x < room.x + room.width &&
-					x + width > room.x &&
-					y < room.y + room.height &&
-					y + height > room.y
-			)
-
-			if (!overlap) {
-				rooms.push({ x, y, width, height })
-			}
-		}
-
-		return rooms
-	}
-	function placeEncounters(map, rooms, symb) {
-		// let encounterSymbols = ['C', 'M', 'N', 'W', 'L', '?']
-
-		rooms.forEach((room) => {
-			let encounters = 0
-			for (let y = room.y + 1; y < room.y + room.height - 1; y++) {
-				for (let x = room.x + 1; x < room.x + room.width - 1; x++) {
-					if (encounters >= 2) break
-					if (Math.random() < 0.3) {
-						let symbol = symb[Math.floor(Math.random() * symb.length)]
-						map[y] = map[y].substring(0, x) + symbol + map[y].substring(x + 1)
-						encounters++
-					}
-				}
-				if (encounters >= 2) break
-			}
-		})
-	}
-
 	/* --------------------------------- Handler -------------------------------- */
-	const encounterAct = {
-		C: {
-			slug: 'C',
-			title: 'Open Chest',
-			action: () => console.log('Open Chest')
-		},
-		M: {
-			slug: 'M',
-			title: 'Fight Monster',
-			action: () => console.log('Fight Monster')
-		},
-		N: {
-			slug: 'N',
-			title: 'Talk to Npc',
-			action: () => console.log('Talk to Npc')
-		},
-		L: {
-			slug: 'L',
-			title: 'Collect Loot',
-			action: () => console.log('Collect Loot')
-		},
-		S: {
-			slug: 'S',
-			title: 'Go to Next Floor',
-			action: () => console.log('Go to Next Floor')
-		},
-		D: {
-			slug: 'D',
-			title: 'Open Door',
-			action: () => console.log('Open Door')
-		}
-	}
 
 	async function handleEncounter(symbol) {
 		actionText = ``
 		actionButtons = []
 
 		if (encounterKeys.includes(symbol)) {
-			let label = encounterAct[symbol].title || 'Action'
-			let fn = encounterAct[symbol].action() || null
-			disabledKeys = true
-			actionText = label
-			addActionButton(label, () => {
-				fn
-				clearActionButtons()
-				disabledKeys = false
-			})
+			switch (symbol) {
+				case 'C':
+					actionText = 'You find a Chest'
+					addActionButton('Open Chest', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				case 'M':
+					actionText = 'You meet an Opponent'
+					addActionButton('Fight Monster', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				case 'N':
+					actionText = 'You meet an NPC'
+					addActionButton('Talk to Npc', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				case 'L':
+					actionText = 'You find an Loot'
+					addActionButton('Collect Loot', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				case 'S':
+					actionText = 'You reech the Stairhouse'
+					addActionButton('Go to next Floor', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				case 'D':
+					actionText = 'You reech a Door'
+					addActionButton('Open Door', () => {
+						actionText = ''
+						clearActionButtons()
+					})
+
+					break
+				default:
+					actionText = ``
+					actionButtons = []
+					break
+			}
 		}
 	}
 	/* ------------------------------- Move Player ------------------------------ */
@@ -202,33 +117,34 @@
 			console.log('Disabled Key')
 			return
 		}
-		let newX = playerX + dx
-		let newY = playerY + dy
+		let newX = player.x + dx
+		let newY = player.y + dy
 
 		if (newX >= 0 && newX < grid[0].length && newY >= 0 && newY < grid.length) {
-			if (grid[newY][newX] !== options.room.wall) {
-				let row = grid[playerY].split('')
-				row[playerX] = options.room.floor
-				grid[playerY] = row.join('')
+			if (grid[newY][newX] !== options.wall) {
+				let row = grid[player.y].split('')
+				row[player.x] = options.floor
+				grid[player.y] = row.join('')
 
 				row = grid[newY].split('')
 				let encounterSymbol = row[newX]
-				row[newX] = options.room.player
+				row[newX] = options.player
 				grid[newY] = row.join('')
 
-				playerX = newX
-				playerY = newY
-				currentSymb = encounterSymbol
+				player.x = newX
+				player.y = newY
 				handleEncounter(encounterSymbol)
 			}
 		}
 	}
 
 	function initMap() {
-		playerX = 2
-		playerY = 2
+		grid.length = 0
+		grid = []
+		player.x = 2
+		player.y = 2
 		currentFloor = 1
-		grid = generateRandomMap(options.room.w, options.room.h)
+		grid = generateRandomMap(options.width, options.height)
 		actionText = ''
 		clearActionButtons()
 	}
@@ -251,10 +167,11 @@
 	}
 </script>
 
-<section class="page-layer nwp">
-	<section class="content">
-		<header class="text-center py-4 space-y-4">
+<section class="page-layer nwp center">
+	<div class="flex flex-col gap-4">
+		<header class="py-4 space-y-4 text-center">
 			<h3>{title}</h3>
+			<h6>{actionText ? actionText : 'No Messages'}</h6>
 			<div class="flex justify-center">
 				{#each actionButtons as { text, onClick }}
 					<button onclick={onClick} class="btn">{text}</button>
@@ -263,45 +180,67 @@
 				{/each}
 			</div>
 		</header>
-		<div class="flex justify-center">
-			<div
-				class="room-grid relative"
-				style="--rw: {options.room.w}; --rh: {options.room.h}; --rs: {options
-					.room.s}px;">
-				{#each grid as row, y}
-					{#each row as col, x}
-						<span
-							style="--op: {col === options.room.floor ? 0 : 1}; {y ==
-								playerY && x == playerX
-								? `--bg: var(--color-base-200)`
-								: ``}">
-							{col === options.room.floor ? '' : col}
-						</span>
-					{/each}
-				{:else}
-					<section class="page-layer center nwp">
-						<article class="card">
-							<div class="flex">
-								<button onclick={initMap} class="btn btn-neutral btn-xl"
-									>Start</button>
-							</div>
-						</article>
-					</section>
+		<div
+			class="room-grid relative"
+			style="--rw: {options.width}; --rh: {options.height}; --rs: {options.size}px;">
+			{#each grid as row, y}
+				{#each row as col, x}
+					{#if col === '_'}
+						<span> </span>
+						<span class="sr-only">{col}</span>
+					{:else}
+						<span>{col}</span>
+					{/if}
 				{/each}
-			</div>
+			{:else}
+				<section class="page-layer center nwp">
+					<article class="card">
+						<div class="flex">
+							<button onclick={initMap} class="btn btn-neutral btn-xl"
+								>Start</button>
+						</div>
+					</article>
+				</section>
+			{/each}
 		</div>
-	</section>
+		<footer class="flex items-center gap-2 py-2">
+			<div class="flex items-center gap-2">
+				<span>Player:</span>
+				<span class="font-bold">{player.name}</span>
+			</div>
+			<div class="flex items-center gap-2">
+				<span>Position:</span>
+				<span class="font-bold">{player.x} / {player.y}</span>
+			</div>
+			<div class="flex items-center gap-2">
+				<span>Floor:</span>
+				<span class="font-bold">{currentFloor}</span>
+			</div>
+		</footer>
+	</div>
 </section>
 
-<!-- <section class="absolute top-0 left-0">
-	<article class="content space-y-4">
-		<FighterCard {...game.player}></FighterCard>
-		<FighterCard {...game.enemy}></FighterCard>
-
-	</article>
-</section> -->
-
 <svelte:window onkeydown={handleKeydown} />
+
+<Modal bind:showModal>
+	{#snippet header()}
+		<header class="flex items-center justify-between">
+			<span class="text-lg font-bold">Info</span>
+			<span></span>
+		</header>
+	{/snippet}
+
+	<p class="py-4">Click the button below to close</p>
+	<div class="modal-action">
+		<button class="btn">Action</button>
+		<form method="dialog">
+			<!-- if there is a button, it will close the modal -->
+			<button class="btn">Close</button>
+		</form>
+	</div>
+</Modal>
+
+
 
 <style>
 	.room-grid {

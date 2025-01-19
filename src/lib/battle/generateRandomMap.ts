@@ -1,86 +1,64 @@
-let canH = 1
-let canW = 1
-export let encounterSymbols = {
-	C: {
-		slug: 'C'
-	},
-	M: {
-		slug: 'M'
-	},
-	N: {
-		slug: 'N'
-	},
-	W: {
-		slug: 'W'
-	},
-	L: {
-		slug: 'L'
-	},
-	'?': {
-		slug: '?'
-	}
-}
-
 export function generateRandomMap(w = 24, h = 24) {
-	canW = w
-	canH = h
+	const canH = h
+	const canW = w
 	let newMap = []
-
-	for (let y = 0; y < canH; y++) {
-		// Erstellt 20 Reihen
-		let row = ''
-		for (let x = 0; x < canW; x++) {
-			// Jede Reihe hat 40 Spalten
-			if (x === 0 || x === canW - 1 || y === 0 || y === canH - 1) {
-				// Randbereiche mit Wänden (#) markieren
-				row += '#'
-			} else {
-				// Freie Flächen (_) einfügen
-				row += '_'
-			}
-		}
-		newMap.push(row) // Die Reihe zur Karte hinzufügen
-	}
-
-	// Räume generieren und platzieren
-	let rooms = generateRooms()
-	rooms.forEach((room) => {
-		for (let y = room.y; y < room.y + room.height; y++) {
-			for (let x = room.x; x < room.x + room.width; x++) {
-				if (
-					y === room.y ||
-					y === room.y + room.height - 1 ||
-					x === room.x ||
-					x === room.x + room.width - 1
-				) {
-					newMap[y] =
-						newMap[y].substring(0, x) + '#' + newMap[y].substring(x + 1)
-				}
-			}
-		}
-		// Tür hinzufügen
-		let doorX = room.x + Math.floor(room.width / 2)
-		let doorY = room.y + room.height - 1
-		newMap[doorY] =
-			newMap[doorY].substring(0, doorX) +
-			'D' +
-			newMap[doorY].substring(doorX + 1)
-	})
-
-	// Begegnungen platzieren
-	placeEncounters(newMap, rooms, Object.keys(encounterSymbols))
-
-	// Spieler und Treppe zur Karte hinzufügen
-	newMap[2] = newMap[2].substring(0, 2) + '@' + newMap[2].substring(3)
-	newMap[canH - 2] =
-		newMap[canH - 2].substring(0, canW - 2) +
-		'S' +
-		newMap[canH - 2].substring(canW - 1)
-	return newMap
-}
-
+	  for (let y = 0; y < canH; y++) {
+		  // Erstellt 20 Reihen
+		  let row = ''
+		  for (let x = 0; x < canW; x++) {
+			  // Jede Reihe hat 40 Spalten
+			  if (x === 0 || x === canW - 1 || y === 0 || y === canH - 1) {
+				  // Randbereiche mit Wänden (#) markieren
+				  row += '#'
+			  } else {
+				  // Freie Flächen (_) einfügen
+				  row += '_'
+			  }
+		  }
+		  newMap.push(row) // Die Reihe zur Karte hinzufügen
+	  }
+  
+	  // Räume generieren und platzieren
+	  let rooms = generateRooms(canW,canH)
+	  rooms.forEach((room) => {
+		  for (let y = room.y; y < room.y + room.height; y++) {
+			  for (let x = room.x; x < room.x + room.width; x++) {
+				  if (
+					  y === room.y ||
+					  y === room.y + room.height - 1 ||
+					  x === room.x ||
+					  x === room.x + room.width - 1
+				  ) {
+					  newMap[y] =
+						  newMap[y].substring(0, x) + '#' + newMap[y].substring(x + 1)
+				  }
+			  }
+		  }
+		  // Tür hinzufügen
+		  let doorX = room.x + Math.floor(room.width / 2)
+		  let doorY = room.y + room.height - 1
+		  newMap[doorY] =
+			  newMap[doorY].substring(0, doorX) +
+			  'D' +
+			  newMap[doorY].substring(doorX + 1)
+	  })
+  
+	  // Begegnungen platzieren
+	  placeEncounters(newMap, rooms)
+  
+	  // Spieler und Treppe zur Karte hinzufügen
+	  newMap[2] =
+			  newMap[2].substring(0, 2) + '@' + newMap[2].substring(3)
+	  newMap[canH - 2] =
+		  newMap[canH - 2].substring(0, canW - 2) +
+		  'S' +
+		  newMap[canH - 2].substring(canW - 1)
+	  return newMap
+  }
+  
+  
 // Räume erstellen
-function generateRooms() {
+function generateRooms(canW, canH) {
 	let rooms = []
 	let numRooms = Math.floor(Math.random() * 3) + 3 // 3-5 Räume
 
@@ -93,9 +71,9 @@ function generateRooms() {
 		// Überlappungen vermeiden
 		let overlap = rooms.some(
 			(room) =>
-				x < room.x + room.width &&
+				x < room.x + room.width + 1 &&
 				x + width > room.x &&
-				y < room.y + room.height &&
+				y < room.y + room.height + 1 &&
 				y + height > room.y
 		)
 
@@ -108,8 +86,8 @@ function generateRooms() {
 }
 
 // Begegnungen platzieren
-function placeEncounters(map, rooms, symb) {
-	// let encounterSymbols = ['C', 'M', 'N', 'W', 'L', '?']
+function placeEncounters(map, rooms) {
+	const symb = ['C', 'M', 'N', 'W', 'L']
 
 	rooms.forEach((room) => {
 		let encounters = 0
