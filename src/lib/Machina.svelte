@@ -45,152 +45,18 @@
 	})
 </script>
 
-{#snippet ctrlBarT(width, height)}
-	<svg {width} {height}>
-		<rect width="25" height="148" />
-		<rect id="sideback" width="25" height="148" />
-		<rect
-			id="changeout"
-			width="17.378"
-			height="9.973"
-			fill="#1F3035"
-			fill-rule="evenodd"
-			transform="translate(3.423 137.825)" />
-		<g id="keypad" transform="translate(3.482 50.597)">
-			<rect
-				id="Rectangle"
-				width="17.749"
-				height="29.882"
-				fill="#686869"
-				fill-rule="evenodd" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(2.45 9.385)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(7.082 9.385)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(11.718 9.385)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(2.45 13.897)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(7.082 13.897)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(11.718 13.897)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(2.45 18.408)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(7.082 18.408)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(11.718 18.408)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(2.45 22.92)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(7.082 22.92)" />
-			<rect
-				id="Rectangle"
-				width="3.581"
-				height="3.57"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(11.718 22.92)" />
-			<rect
-				id="Rectangle"
-				width="11.631"
-				height="4.815"
-				fill="#C0BCB6"
-				fill-rule="evenodd"
-				transform="translate(2.814 1.777)" />
-		</g>
-		<g id="coinslot" transform="translate(3.482 102.994)">
-			<path
-				id="Path"
-				d="M13.8681 29.8821C13.8681 29.8821 3.88099 29.8821 3.88099 29.8821C1.73895 29.8821 0 28.1485 0 26.0129C0 26.0129 0 3.86922 0 3.86922C0 1.73362 1.73895 0 3.88099 0C3.88099 0 13.8681 0 13.8681 0C16.0101 0 17.7491 1.73368 17.7491 3.86922C17.7491 3.86922 17.7491 26.0129 17.7491 26.0129C17.7492 28.1524 16.0141 29.8821 13.8681 29.8821C13.8681 29.8821 13.8681 29.8821 13.8681 29.8821Z"
-				fill="#686869"
-				fill-rule="evenodd" />
-			<rect
-				id="Rectangle"
-				width="11.849"
-				height="2.1"
-				fill="#111B1D"
-				fill-rule="evenodd"
-				transform="translate(2.707 12.841)" />
-		</g>
-		<rect
-			id="coindisplay"
-			width="23"
-			height="10"
-			fill="#686869"
-			fill-rule="evenodd"
-			transform="translate(1 24.482)" />
-		<rect
-			id="statusdisplay"
-			width="24.318"
-			height="15.406"
-			fill="#686869"
-			fill-rule="evenodd"
-			transform="translate(0.198 0.482)" />
-	</svg>
-{/snippet}
-
 {#snippet machina2T()}
-	<div style="background-image: url('/img/machine/machine-2x-empty.png')">
+	<div class="machine-2">
 		<svg height="600" width="368" stroke="none" viewBox="0 0 368 600">
 			<g id="machine-2x-empty">
 				<rect id="machine-2x" width="368" height="600" fill="none" />
+				<rect
+					id="productsel-2x"
+					width="218"
+					height="166"
+					fill-opacity="0.1"
+					transform="translate(35 19)"
+					fill="currentColor" />
 
 				<rect
 					opacity="0"
@@ -200,16 +66,21 @@
 					id="sidebarel-2x"
 					transform="translate(287 25)" />
 
-				<!-- <rect
-					fill="none"
-					height="166"
-					width="218"
-					id="productsel-2x"
-					transform="translate(35 19)" /> -->
-
+				<foreignObject x="35" y="19" width="218" height="166">
+					<div
+						class="grid grid-cols-4 p-2 gap-2 grid-rows-3 overflow-hidden w-full h-full">
+						{#each ['2E1B3B', 'C90000', '686869', 'B01B4F', '686869', '2E1B3B', 'B01B4F', 'C90000', 'C90000', 'B01B4F', '2E1B3B', '686869'] as item}
+							<button
+								class="font-extralight flex items-end justify-end p-1 rounded"
+								style="background-color: #{item}; font-size: var(--spacing-sm);">
+								<span class="bg-base-300 leading-snug text-base-content">{item}</span>
+							</button>
+						{/each}
+					</div>
+				</foreignObject>
 				<foreignObject x="287" y="25" height="323" width="56">
 					<div class="text-xs w-full h-full relative">
-						{#each ['statusdispl', 'coindispl', 'coinslot', 'keypad', 'changeout'] as id}
+						{#each ['statusdispl', 'coindispl', 'keypad', 'coinslot', 'changeout'] as id}
 							<button onclick={clickCtrl} class="rounded-box" {id}
 								><span class="sr-only">{id}</span></button>
 						{/each}
@@ -259,6 +130,10 @@
 			overflow: hidden;
 			border-radius: var(--radius-box, 0);
 		}
+	}
+	.machine-2 {
+		background-image: url('/img/machine/machine-2x-empty.png');
+		background-repeat: no-repeat;
 	}
 	#statusdispl {
 		position: absolute;

@@ -1,0 +1,99 @@
+{
+	"image": "idle-1-sheet.png",
+	"src": "/sprites/idle-1-sheet.png",
+	"scale": "1",
+	"size": {
+		"w": 384,
+		"h": 96
+	},
+	"frames": [
+		{
+			"filename": "idle_0",
+			"frame": {
+				"x": 0,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 96,
+				"h": 96
+			},
+			"duration": 100
+		},
+		{
+			"filename": "idle_1",
+			"frame": {
+				"x": 96,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 96,
+				"h": 96
+			},
+			"duration": 100
+		},
+		{
+			"filename": "idle_2",
+			"frame": {
+				"x": 192,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 96,
+				"h": 96
+			},
+			"duration": 100
+		},
+		{
+			"filename": "idle_3",
+			"frame": {
+				"x": 288,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 96,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 96,
+				"h": 96
+			},
+			"duration": 100
+		}
+	]
+}
