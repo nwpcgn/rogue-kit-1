@@ -1,5 +1,105 @@
 <script>
-	//	let { title = 'Gaming' } = $props()
+	import sleep from './utils/sleep'
+	const coins = [0.05, 0.1, 0.2, 0.5, 1, 2]
+
+	const sodas = [
+		{
+			name: 'Pepsi',
+			amount: 5,
+			price: 1,
+			code: 'A1'
+		},
+		{
+			name: 'Coke',
+			amount: 5,
+			price: 1.2,
+			code: 'A2'
+		},
+		{
+			name: 'Fanta',
+			amount: 5,
+			price: 1.1,
+			code: 'A3'
+		},
+		{
+			name: 'Sprite',
+			amount: 5,
+			price: 0.95,
+			code: 'A4'
+		}
+	]
+
+	const sodaMap = $state(sodas)
+	let insertCoins = $state([])
+	let disabled = $state(false)
+	let insertTotal = $derived(insertCoins.reduce((sum, coin) => sum + coin, 0))
+	function addCoin(coin) {
+		if (coins.includes(coin)) {
+			disabled = true
+			sleep(600)
+				.then(() => {
+					insertCoins.push(coin)
+				})
+				.then(() => {
+					console.log(`Münze hinzugefügt: ${(coin / 100).toFixed(2)}€`)
+					disabled = false
+				})
+		} else {
+			console.log(`Ungültige Münze: ${(coin / 100).toFixed(2)}€`)
+		}
+	}
+
+	// Rückgeld berechnen
+
+	function getChangeArray(change) {
+		let changeCoins = []
+		let remaining = parseFloat(change)
+		coins.sort((a, b) => b - a) // Absteigend sortieren
+
+		for (let coin of coins) {
+			while (remaining >= coin) {
+				changeCoins.push(coin) // Münze hinzufügen
+				remaining = (remaining - coin).toFixed(2) // Rest aktualisieren
+			}
+		}
+
+		console.log({ changeCoins })
+		return changeCoins
+	}
+
+	// Getränk kaufen
+	function buySoda(code) {
+		const soda = sodaMap.find((s) => s.code === code)
+		if (!soda) {
+			console.log('Ungültiger Code!')
+			return
+		}
+
+		if (soda.amount <= 0) {
+			console.log(`${soda.name} ist ausverkauft!`)
+			return
+		}
+
+		if (insertTotal >= soda.price) {
+			const change = insertTotal - soda.price
+			soda.amount-- // Getränk ausgeben
+			insertCoins = [] // Münzen zurücksetzen
+			console.log(`Sie haben ${soda.name} gekauft!`)
+			console.log(`Rückgeld: ${formatChange(change)}`)
+			return getChangeArray(change)
+		} else {
+			const fehlend = ((soda.price - total) / 100).toFixed(2)
+			console.log(`Nicht genug Geld. Fehlend: ${fehlend}€`)
+			return []
+		}
+	}
+
+	// Hilfsfunktion zur Formatierung von Rückgeld
+	function formatChange(change) {
+		return getChangeArray(change)
+			.map((c) => (c / 100).toFixed(2) + '€')
+			.join(', ')
+	}
 
 	function clickCtrl(event) {
 		const id = event.currentTarget.getAttribute('id')
@@ -73,7 +173,8 @@
 							<button
 								class="font-extralight flex items-end justify-end p-1 rounded"
 								style="background-color: #{item}; font-size: var(--spacing-sm);">
-								<span class="bg-base-300 leading-snug text-base-content">{item}</span>
+								<span class="bg-base-300 leading-snug text-base-content"
+									>{item}</span>
 							</button>
 						{/each}
 					</div>

@@ -1,0 +1,406 @@
+:33:43.240Z
+Spiel initialisiert. Willkommen in Neon Wasteland!
+23:33:43.240Z
+Spieler betritt Level 1
+23:33:43.240Z
+Du erkundest den Level...
+23:33:43.240Z
+Ein Wächter-Roboter erscheint!
+23:33:43.240Z
+Kampf beginnt: Spieler vs Wächter-Roboter
+23:33:43.240Z
+
+--- Runde 1 ---
+23:33:43.240Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.240Z
+1. Angreifen
+23:33:43.241Z
+2. Verteidigen
+23:33:43.241Z
+3. Item benutzen
+23:33:43.241Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.241Z
+Wächter-Roboter greift Spieler an und verursacht 10 Schaden
+23:33:43.241Z
+Spieler nimmt 5 Schaden. Verbleibende Gesundheit: 95
+23:33:43.241Z
+
+--- Runde 2 ---
+23:33:43.241Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.241Z
+1. Angreifen
+23:33:43.241Z
+2. Verteidigen
+23:33:43.241Z
+3. Item benutzen
+23:33:43.241Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.241Z
+Wächter-Roboter greift Spieler an und verursacht 10 Schaden
+23:33:43.241Z
+Spieler nimmt 5 Schaden. Verbleibende Gesundheit: 90
+23:33:43.241Z
+
+--- Runde 3 ---
+23:33:43.241Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.241Z
+1. Angreifen
+23:33:43.241Z
+2. Verteidigen
+23:33:43.241Z
+3. Item benutzen
+23:33:43.241Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.241Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.241Z
+Spieler nimmt 4 Schaden. Verbleibende Gesundheit: 86
+23:33:43.241Z
+
+--- Runde 4 ---
+23:33:43.241Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.241Z
+1. Angreifen
+23:33:43.241Z
+2. Verteidigen
+23:33:43.242Z
+3. Item benutzen
+23:33:43.242Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.242Z
+Wächter-Roboter greift Spieler an und verursacht 8 Schaden
+23:33:43.242Z
+Spieler nimmt 3 Schaden. Verbleibende Gesundheit: 83
+23:33:43.242Z
+
+--- Runde 5 ---
+23:33:43.242Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.242Z
+1. Angreifen
+23:33:43.242Z
+2. Verteidigen
+23:33:43.242Z
+3. Item benutzen
+23:33:43.242Z
+Spieler geht in Verteidigungshaltung. Verteidigung erhöht sich auf 7
+23:33:43.242Z
+Wächter-Roboter greift Spieler an und verursacht 8 Schaden
+23:33:43.242Z
+Spieler nimmt 1 Schaden. Verbleibende Gesundheit: 82
+23:33:43.242Z
+
+--- Runde 6 ---
+23:33:43.242Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.242Z
+1. Angreifen
+23:33:43.242Z
+2. Verteidigen
+23:33:43.242Z
+3. Item benutzen
+23:33:43.242Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.242Z
+Wächter-Roboter greift Spieler an und verursacht 10 Schaden
+23:33:43.242Z
+Spieler nimmt 3 Schaden. Verbleibende Gesundheit: 79
+23:33:43.242Z
+
+--- Runde 7 ---
+23:33:43.242Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.242Z
+1. Angreifen
+23:33:43.242Z
+2. Verteidigen
+23:33:43.242Z
+3. Item benutzen
+23:33:43.242Z
+Spieler greift Wächter-Roboter an und verursacht 12 Schaden
+23:33:43.242Z
+Wächter-Roboter nimmt 9 Schaden. Verbleibende Gesundheit: 41
+23:33:43.242Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.242Z
+Spieler nimmt 2 Schaden. Verbleibende Gesundheit: 77
+23:33:43.243Z
+
+--- Runde 8 ---
+23:33:43.243Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.243Z
+1. Angreifen
+23:33:43.243Z
+2. Verteidigen
+23:33:43.243Z
+3. Item benutzen
+23:33:43.243Z
+Spieler geht in Verteidigungshaltung. Verteidigung erhöht sich auf 9
+23:33:43.243Z
+Wächter-Roboter greift Spieler an und verursacht 10 Schaden
+23:33:43.243Z
+Spieler nimmt 1 Schaden. Verbleibende Gesundheit: 76
+23:33:43.243Z
+
+--- Runde 9 ---
+23:33:43.243Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.243Z
+1. Angreifen
+23:33:43.243Z
+2. Verteidigen
+23:33:43.243Z
+3. Item benutzen
+23:33:43.243Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.243Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.243Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.243Z
+
+--- Runde 10 ---
+23:33:43.243Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.243Z
+1. Angreifen
+23:33:43.243Z
+2. Verteidigen
+23:33:43.243Z
+3. Item benutzen
+23:33:43.243Z
+Spieler greift Wächter-Roboter an und verursacht 14 Schaden
+23:33:43.243Z
+Wächter-Roboter nimmt 11 Schaden. Verbleibende Gesundheit: 30
+23:33:43.243Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.243Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.243Z
+
+--- Runde 11 ---
+23:33:43.243Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.243Z
+1. Angreifen
+23:33:43.243Z
+2. Verteidigen
+23:33:43.243Z
+3. Item benutzen
+23:33:43.243Z
+Spieler greift Wächter-Roboter an und verursacht 14 Schaden
+23:33:43.243Z
+Wächter-Roboter nimmt 11 Schaden. Verbleibende Gesundheit: 19
+23:33:43.243Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.244Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.244Z
+
+--- Runde 12 ---
+23:33:43.244Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.244Z
+1. Angreifen
+23:33:43.244Z
+2. Verteidigen
+23:33:43.244Z
+3. Item benutzen
+23:33:43.244Z
+Spieler greift Wächter-Roboter an und verursacht 13 Schaden
+23:33:43.244Z
+Wächter-Roboter nimmt 10 Schaden. Verbleibende Gesundheit: 9
+23:33:43.244Z
+Wächter-Roboter greift Spieler an und verursacht 8 Schaden
+23:33:43.244Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.244Z
+
+--- Runde 13 ---
+23:33:43.244Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.244Z
+1. Angreifen
+23:33:43.244Z
+2. Verteidigen
+23:33:43.244Z
+3. Item benutzen
+23:33:43.244Z
+Spieler geht in Verteidigungshaltung. Verteidigung erhöht sich auf 11
+23:33:43.244Z
+Wächter-Roboter greift Spieler an und verursacht 8 Schaden
+23:33:43.244Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.244Z
+
+--- Runde 14 ---
+23:33:43.244Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.244Z
+1. Angreifen
+23:33:43.244Z
+2. Verteidigen
+23:33:43.244Z
+3. Item benutzen
+23:33:43.244Z
+Spieler geht in Verteidigungshaltung. Verteidigung erhöht sich auf 13
+23:33:43.244Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.244Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.244Z
+
+--- Runde 15 ---
+23:33:43.244Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.244Z
+1. Angreifen
+23:33:43.244Z
+2. Verteidigen
+23:33:43.244Z
+3. Item benutzen
+23:33:43.244Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.244Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.244Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.244Z
+
+--- Runde 16 ---
+23:33:43.244Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.245Z
+1. Angreifen
+23:33:43.245Z
+2. Verteidigen
+23:33:43.245Z
+3. Item benutzen
+23:33:43.245Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.245Z
+Wächter-Roboter greift Spieler an und verursacht 10 Schaden
+23:33:43.245Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.245Z
+
+--- Runde 17 ---
+23:33:43.245Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.245Z
+1. Angreifen
+23:33:43.245Z
+2. Verteidigen
+23:33:43.245Z
+3. Item benutzen
+23:33:43.245Z
+Spieler geht in Verteidigungshaltung. Verteidigung erhöht sich auf 15
+23:33:43.245Z
+Wächter-Roboter greift Spieler an und verursacht 9 Schaden
+23:33:43.245Z
+Spieler nimmt 0 Schaden. Verbleibende Gesundheit: 76
+23:33:43.245Z
+
+--- Runde 18 ---
+23:33:43.245Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.245Z
+1. Angreifen
+23:33:43.245Z
+2. Verteidigen
+23:33:43.245Z
+3. Item benutzen
+23:33:43.245Z
+Spieler greift Wächter-Roboter an und verursacht 14 Schaden
+23:33:43.245Z
+Wächter-Roboter nimmt 11 Schaden. Verbleibende Gesundheit: 0
+23:33:43.245Z
+Spieler hat den Kampf gewonnen!
+23:33:43.251Z
+Spiel initialisiert. Willkommen in Neon Wasteland!
+23:33:43.251Z
+Spieler betritt Level 1
+23:33:43.251Z
+Du erkundest den Level...
+23:33:43.252Z
+Ein Drohnen-Schwarm erscheint!
+23:33:43.252Z
+Kampf beginnt: Spieler vs Drohnen-Schwarm
+23:33:43.252Z
+
+--- Runde 1 ---
+23:33:43.252Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.252Z
+1. Angreifen
+23:33:43.252Z
+2. Verteidigen
+23:33:43.252Z
+3. Item benutzen
+23:33:43.252Z
+Spieler greift Drohnen-Schwarm an und verursacht 12 Schaden
+23:33:43.252Z
+Drohnen-Schwarm nimmt 11 Schaden. Verbleibende Gesundheit: 19
+23:33:43.252Z
+Drohnen-Schwarm greift Spieler an und verursacht 6 Schaden
+23:33:43.252Z
+Spieler nimmt 1 Schaden. Verbleibende Gesundheit: 99
+23:33:43.252Z
+
+--- Runde 2 ---
+23:33:43.252Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.252Z
+1. Angreifen
+23:33:43.252Z
+2. Verteidigen
+23:33:43.252Z
+3. Item benutzen
+23:33:43.252Z
+Spieler greift Drohnen-Schwarm an und verursacht 14 Schaden
+23:33:43.252Z
+Drohnen-Schwarm nimmt 13 Schaden. Verbleibende Gesundheit: 6
+23:33:43.252Z
+Drohnen-Schwarm greift Spieler an und verursacht 7 Schaden
+23:33:43.252Z
+Spieler nimmt 2 Schaden. Verbleibende Gesundheit: 97
+23:33:43.252Z
+
+--- Runde 3 ---
+23:33:43.252Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.252Z
+1. Angreifen
+23:33:43.252Z
+2. Verteidigen
+23:33:43.252Z
+3. Item benutzen
+23:33:43.253Z
+Kein Item im Inventar. Der Zug wird übersprungen.
+23:33:43.253Z
+Drohnen-Schwarm greift Spieler an und verursacht 8 Schaden
+23:33:43.253Z
+Spieler nimmt 3 Schaden. Verbleibende Gesundheit: 94
+23:33:43.253Z
+
+--- Runde 4 ---
+23:33:43.253Z
+Spieler ist am Zug. Wähle eine Aktion:
+23:33:43.253Z
+1. Angreifen
+23:33:43.253Z
+2. Verteidigen
+23:33:43.253Z
+3. Item benutzen
+23:33:43.253Z
+Spieler greift Drohnen-Schwarm an und verursacht 11 Schaden
+23:33:43.253Z
+Drohnen-Schwarm nimmt 10 Schaden. Verbleibende Gesundheit: 0
+23:33:43.253Z
+Spieler hat den Kampf gewonnen!
